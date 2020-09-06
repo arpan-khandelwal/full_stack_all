@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Practical 10</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            width: 100%;
+            height: 75px;
+            position: fixed;
+            top: 0px;
+            background-color: white;
+            border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header img {
+            height: 70px;
+            width: 70px;
+            margin-right: 15px;
+        }
+        
+        .header h1 {
+            color: rgb(0, 0, 0);
+            line-height: 70px;
+        }
+        
+        .content {
+            padding: 20px;
+            width: 100%;
+            height: fit-content;
+            margin-top: 70px;
+            float: right;
+            transition: all .9s;
+            /* border:6px solid red; */
+        }
+        
+        .content img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: auto;
+        }
+        
+        .content p {
+            padding: 20px;
+            text-align: justify;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 70px;
+            width: 20%;
+            height: 100%;
+            background-color: #353b48;
+            left: -100%;
+            transition: .7s;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            border-bottom: 2px solid rgba(255, 0, 0, 0.5)
+        }
+        
+        .sidebar ul li a {
+            font-size: 2vw;
+            color: rgb(253, 6, 142);
+            display: block;
+            text-transform: none;
+            text-align: center;
+            padding: 15px 30px;
+            text-align: justify;
+        }
+        
+        .sidebar ul li a span {
+            margin-left: 10px;
+        }
+        
+        .sidebar ul li a:hover {
+            border-left: 10px solid rgb(9, 255, 0);
+            transition: .7s;
+        }
+        
+        .show-btn,
+        .hide-btn {
+            color: rgb(0, 217, 255);
+            font-size: 35px;
+            position: fixed;
+            top: 20px;
+            left: 50px;
+        }
+        
+        .hide-btn {
+            opacity: 0;
+        }
+        
+        #chk {
+            display: none;
+        }
+        
+        #chk:checked~.sidebar {
+            left: 0;
+        }
+        
+        #chk:checked~.show-btn {
+            opacity: 0;
+        }
+        
+        #chk:checked~.hide-btn {
+            opacity: 1;
+            transition: .8s;
+        }
+        
+        .sidebar .social {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 80%;
+            padding: 20px 15px;
+            border-top: 2px solid white;
+        }
+        
+        .sidebar .social i {
+            font-size: 2vw;
+            color: white;
+        }
+        
+        .sidebar .social a i:hover {
+            font-size: 65px;
+            transition: .5s;
+        }
+        
+        #chk:checked~.content {
+            width: 80%;
+        }
+        
+        @media(max-width: 750px) {
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .sidebar ul li a {
+                text-align: center;
+                font-size: 4vw;
+            }
+            .sidebar .social {
+                margin-top: 200px;
+            }
+            .sidebar .social i {
+                font-size: 8vw;
+            }
+            .header h1 {
+                display: none;
+            }
+            .header img {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../images/fullstack_icon.png" />
+        <h1>FullStack</h1>
+
+    </div>
+    <input type="checkbox" name="" id="chk">
+    <label for="chk" class="show-btn"><i class="fa fa-bars"></i></label>
+    <label for="chk" class="hide-btn"><i class="fa fa-times"></i></label>
+    <div class="content">
+        <img src="../images/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="">
+        <p>The World Wide Web has become a major delivery platform for a variety of complex and sophisticated enterprise applications in several domains. In addition to their inherent multifaceted functionality, these web applications exhibit complex behavior
+            and place some unique demands on their usability, performance, security and ability to grow and evolve. However, a vast majority of these applications continue to be developed in an ad-hoc way, contributing to problems of usability, maintainability,
+            quality and reliability. While web development can benefit from established practices from other related disciplines, it has certain distinguishing characteristics that demand special considerations. In the recent years, there have been some
+            developments towards addressing these problems and requirements. As an emerging discipline, web engineering actively promotes systematic, disciplined and quantifiable approaches towards successful development of high-quality, ubiquitously
+            usable web-based systems and applications.In particular, web engineering focuses on the methodologies, techniques and tools that are the foundation of web application development and which support their design, development, evolution, and
+            evaluation. Web application development has certain characteristics that make it different from traditional software, information system, or computer application development. Web engineering is multidisciplinary and encompasses contributions
+            from diverse areas: systems analysis and design, software engineering, hypermedia/hypertext engineering, requirements engineering, human-computer interaction, user interface, information engineering, information indexing and retrieval, testing,
+            modeling and simulation, project management, and graphic design and presentation. Web engineering is neither a clone, nor a subset of software engineering, although both involve programming and software development.In particular, web engineering
+            focuses on the methodologies, techniques and tools that are the foundation of web application development and which support their design, development, evolution, and evaluation. Web application development has certain characteristics that
+            make it different from traditional software, information system, or computer application development. Web engineering is multidisciplinary and encompasses contributions from diverse areas: systems analysis and design, software engineering,
+            hypermedia/hypertext engineering, requirements engineering, human-computer interaction, user interface, information engineering, information indexing and retrieval, testing, modeling and simulation, project management, and graphic design and
+            presentation. Web engineering is neither a clone, nor a subset of software engineering, although both involve programming and software development.</p>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#"><i class='fa fa-users'><span>Team</span></i></a></li>
+            <li><a href="#"><i class='fa fa-id-card'><span>About Us</span></i></a></li>
+            <li><a href="#"><i class="fa fa-cog"><span>Technologies</span></i></a></li>
+            <li><a href="#"><i class='fa fa-phone'><span>Contact Us</span></i></a></li>
+        </ul>
+        <div class="social">
+            <a href="#"><i class="fa fa-facebook-square"> </i></a>
+            <a href="#"> <i class="fa fa-youtube-square"></i></a>
+            <a href="#"> <i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>

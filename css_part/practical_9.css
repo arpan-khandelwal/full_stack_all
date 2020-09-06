@@ -116,7 +116,7 @@ html {
         color: brown;
         text-align: center;
     }
-    /* following is copied from practical-6 and is for technologies */
+    /* following is copied from practical-6 & 8 and is for technologies */
     .box:hover {
         background-color: wheat;
         transition: 2s;
@@ -345,7 +345,7 @@ html {
         color: brown;
         text-align: center;
     }
-    /* following is copied from practical-6 and is for technologies */
+    /* following is copied from practical-6 & 8 and is for technologies */
     .box:hover {
         background-color: wheat;
         transition: 2s;
@@ -606,7 +606,7 @@ html {
         color: brown;
         text-align: center;
     }
-    /* following is copied from practical-6 and is for technologies */
+    /* following is copied from practical-6 & 8 and is for technologies */
     .box:hover {
         background-color: wheat;
         transition: 2s;
