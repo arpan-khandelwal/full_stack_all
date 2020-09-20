@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Practical-13</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .main-content h1 {
+            text-align: center;
+            color: goldenrod;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        
+        footer {
+            background: magenta;
+            margin: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .sec-1 {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .sec-1 h2 {
+            color: black;
+            font: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .sec-1 p {
+            color: darkgray;
+        }
+        
+        .sec-1 .about {
+            width: 40%;
+            padding: 10px;
+        }
+        
+        .sec-1 .link {
+            padding: 10px;
+        }
+        
+        .sec-1 .about p {
+            line-height: 25px;
+        }
+        
+        .link ul {
+            list-style: none;
+        }
+        
+        .link ul li a {
+            color: darkgray;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 15px;
+        }
+        
+        .link ul li a:hover {
+            color: white;
+        }
+        
+        .link ul li a:hover span {
+            color: white;
+        }
+        
+        i {
+            color: rgb(168, 164, 164);
+            padding-right: 8px;
+        }
+        
+        .sec-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 30px;
+        }
+        
+        .sec-2 p {
+            font-size: 30px;
+            color: rgb(168, 164, 164);
+            margin: 10px;
+        }
+        
+        .sec-2 a {
+            background: red;
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        
+        .sec-2 a:hover {
+            background: orangered;
+            color: black;
+        }
+        
+        .sec-3 {
+            margin: 10px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sec-3 ul {
+            list-style: none;
+        }
+        
+        .sec-3 ul li {
+            display: inline;
+        }
+        
+        .sec-3 ul li a {
+            font-size: 50px;
+            margin: 15px;
+        }
+        
+        .sec-3 ul li:nth-child(1) i {
+            color: black;
+        }
+        
+        .sec-3 ul li:nth-child(2) i {
+            color: blue;
+        }
+        
+        .sec-3 ul li:nth-child(3) i {
+            color: red;
+        }
+        
+        .sec-3 ul li:nth-child(4) i {
+            color: orange;
+        }
+        
+        .sec-3 ul li:nth-child(5) i {
+            color: green;
+        }
+        
+        .sec-3 ul li:nth-child(1):hover i {
+            color: #d2f6c5;
+            transition: .4s;
+        }
+        
+        .sec-3 ul li:nth-child(2):hover i {
+            color: #d2f6c5;
+            transition: .4s;
+        }
+        
+        .sec-3 ul li:nth-child(3):hover i {
+            color: #d2f6c5;
+            transition: .4s;
+        }
+        
+        .sec-3 ul li:nth-child(4):hover i {
+            color: #d2f6c5;
+            transition: .4s;
+        }
+        
+        .sec-3 ul li:nth-child(5):hover i {
+            color: #d2f6c5;
+            transition: .4s;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: black;
+        }
+        
+        .footer-content p {
+            text-align: center;
+            color: rgb(168, 164, 164);
+            font-size: 20px;
+            margin: 10px;
+            position: relative;
+        }
+        
+        .footer-content p::before {
+            content: '';
+            width: 0;
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 0;
+            background: white;
+            top: -10px;
+            transition: all .3s;
+        }
+        
+        .footer-content p::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            display: block;
+            position: absolute;
+            right: 0;
+            background: white;
+            bottom: -10px;
+            transition: all .3s;
+        }
+        
+        .footer-content p:hover::after,
+        .footer-content p:hover::before {
+            width: 100%;
+        }
+        
+        hr {
+            opacity: .2;
+        }
+        
+        @media (max-width:998px) {
+            .sec-1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .sec-1 .about {
+                width: 100%;
+                padding: 20px;
+            }
+            .sec-1 .about p {
+                line-height: 25px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width:610px) {
+            .sec-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .sec-1 .about {
+                width: 100%;
+                padding: 20px;
+            }
+            .sec-1 .about p {
+                line-height: 25px;
+            }
+            .link {
+                margin: 10px;
+            }
+        }
+        
+        @media(max-width: 546px) {
+            .sec-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .sec-1 .about {
+                width: 100%;
+                padding: 20px;
+            }
+            .sec-1 .about p {
+                line-height: 25px;
+            }
+            .link {
+                margin: 10px;
+            }
+            .sec-2 p {
+                font-size: 20px;
+            }
+            .sec-2 a {
+                font-size: 20px;
+            }
+            .sec-3 ul li a {
+                font-size: 34px;
+                margin: 5px;
+            }
+            .footer-content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-content">
+        <h1>Responsive Footer</h1>
+    </section>
+    <footer>
+        <section class="sec-1">
+            <section class="about">
+                <h2>About</h2>
+                <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications, electronic businesses,
+                    and social network services. </p>
+            </section>
+            <section class="link">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">UI Design</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Hybrid Apps</a></li>
+                </ul>
+            </section>
+            <section class="link">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">SiteMap</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+            <section class="link">
+                <h2>Contact Us</h2>
+                <ul>
+
+                    <li><a href="#"><i class="fas fa-envelope"></i>khandelwalarpan8@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone-alt"></i>COntact : 9729812426</a></li>
+                    <li><a href="#"><i class="fab fa-github"></i>thakurups</a></li>
+                </ul>
+            </section>
+        </section>
+        <hr width="100%" noshade />
+        <section class="sec-2">
+            <p>Register For Free</p>
+            <a href="#">Sign Up</a>
+        </section>
+        <hr width="100%" noshade />
+        <section class="sec-3">
+            <ul>
+                <li><a href="https://github.com/arpan-khandelwal"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fab fa-google"></i></a></li>
+            </ul>
+        </section>
+        <hr width="100%" noshade />
+        <section class="footer-content">
+            <p>
+                <i class="fas fa-copyright"></i> 2020 Copyright : Made by *AK*
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>
