@@ -40,16 +40,16 @@ function dynamicgreeting() {
     console.log(hour);
     if (hour < 12) {
         greeting.innerHTML = "Good Morning";
-        document.body.style.backgroundImage = 'url(../../images/morning.jpg)';
-    } else if (hour < 16) {
-        document.body.style.backgroundImage = 'url(../../images/noon.jp3g)';
+        document.body.style.backgroundImage = "url('../../images/morning.jpg')";
+    } else if (hour > 12 && hour < 16) {
+        document.body.style.backgroundImage = "url('../../images/noon.jp3g')";
         greeting.innerHTML = "Good Afternoon";
-    } else if (hour < 19) {
-        document.body.style.backgroundImage = 'url(../../images/evening.png)';
+    } else if (hour > 16 && hour < 19) {
+        document.body.style.backgroundImage = "url('../../images/evening.png')";
         greeting.innerHTML = "Good Evening";
-        document.body.style.color = "white";
+
     } else {
-        document.body.style.backgroundImage = 'url(../../images/night.jpj)';
+        document.body.style.backgroundImage = "url('../../images/night.jpj')";
         greeting.innerHTML = "Good night";
         document.body.style.color = "white";
     }
