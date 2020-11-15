@@ -42,14 +42,14 @@ function dynamicgreeting() {
         greeting.innerHTML = "Good Morning";
         document.body.style.backgroundImage = "url('../../images/morning.jpg')";
     } else if (hour > 12 && hour < 16) {
-        document.body.style.backgroundImage = "url('../../images/noon.jp3g')";
+        document.body.style.backgroundImage = "url('../../images/noon.jpeg')";
         greeting.innerHTML = "Good Afternoon";
     } else if (hour > 16 && hour < 19) {
         document.body.style.backgroundImage = "url('../../images/evening.png')";
         greeting.innerHTML = "Good Evening";
 
     } else {
-        document.body.style.backgroundImage = "url('../../images/night.jpj')";
+        document.body.style.backgroundImage = "url('../../images/night.jpg')";
         greeting.innerHTML = "Good night";
         document.body.style.color = "white";
     }
